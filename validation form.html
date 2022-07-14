@@ -1,0 +1,45 @@
+<!DOCKTYPE html>
+<html>
+    <head>
+        <title>Validation</title>
+        <link rel="icon" href="world.ico">
+        <meta varchar="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="discription" content="My New Validation Form">
+        <meta name="author" content="Nalli Hepsi">
+        <style type="text/css">
+            div{
+                background-color: skyblue ;
+                width: 500px;
+            }
+        </style>
+        <script type="text/javascript">
+            function validate(){
+                var fn=document.getElementById("first").value;
+                var mn=document.getElementById("middle").value;
+                var ln=document.getElementById("last").value;
+                var nn=document.getElementById("number").value;
+                var pw=document.getElementById("pass").value;
+                if(fn.length<3 || mn.length<4 || ln.length<3 || nn.length!=10 || pw.length<=6)
+                }
+        </script>
+    </head>
+    <body style="background-color:powderblue;" >
+        <center>
+          <div>
+            <form action="/Hepsi.php" method="post" onsubmit="return validate();">
+              <table>
+                  <h1 style="font-size:80px">Registration Form</h1>/
+                  <tr><td>First Name:<input type="text" name="n" placeholder="Enter Your First Name" id="first"></td></tr><br><br>
+                  <tr><td>Middle Name:<input type="text" name="m" placeholder="Enter Your Middle Name" id="middle"></td></tr>
+                  <tr><td>Last Name:<input type="text" name="l" placeholder="Enter Your Last Name" id="last"></td></tr>
+                  <tr><td>Phone Number:<input type="number" name="num" placeholder="Enter Your Number" id="number"></td></tr>
+                  <tr><td>Password:<input type="Password" name="p" placeholder="Enter Your Password" id="pass"></td></tr>
+                  <tr><td><input type="submit" name="s" value="Register"> </td></tr>
+              </table>
+            </form>
+          </div>
+          <marquee bgcolor="white" direction="right">REGISTRATION PROCESS RUNNING</marquee>
+        </center>
+    </body>
+</html>
